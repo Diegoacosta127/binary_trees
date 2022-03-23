@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
   * binary_tree_sibling - returns the sibling of a node in a binary tree
-  * @tree: pointer to the root node of the tree
+  * @node: pointer to a node of the tree
   * Return: pointer to the sibling
   */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
@@ -12,11 +12,12 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 
 	if (!node->parent)
 		return (NULL);
-
-	printf("address of the node: %p\n", (void *)node);
-	printf("adress of the parent: %p\n", (void *)node->parent);
-	printf("adress of the right child: %p\n", (void *)node->parent->right);
-	printf("adress of the left child: %p\n", (void *)node->parent->left);
+	/*
+	 * printf("address of the node: %p\n", (void *)node);
+	 * printf("adress of the parent: %p\n", (void *)node->parent);
+	 * printf("adress of the right child: %p\n", (void *)node->parent->right);
+	 * printf("adress of the left child: %p\n", (void *)node->parent->left);
+	 */
 
 	if ((void *)node == (void *)node->parent->left)
 		return (node->parent->right);
