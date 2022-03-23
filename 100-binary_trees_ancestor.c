@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-#include <stdio.h>
 /**
   * binary_tree_depth - measures the depth of a binary tree
   * @tree: pointer to the root node of the tree to measure the depth
@@ -27,9 +26,9 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	if (!first || !second)
 		return (NULL);
 	if (first->parent == second)
-		return ((void *)second);
+		return ((binary_tree_t *)second);
 	if (first == second->parent)
-		return ((void *)first);
+		return ((binary_tree_t *)first);
 	while (diff != 0)
 	{
 		if (diff < 0)
