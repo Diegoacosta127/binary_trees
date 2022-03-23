@@ -69,9 +69,6 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	if (binary_tree_is_full(tree))
 		if (b_t_balance(tree->left) == 0 && b_t_balance(tree->right) == 0)
-		{
-			printf("is balanced\n");
 			return (1);
-		}
 	return (0);
 }
