@@ -42,7 +42,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 			diff--;
 		}
 	}
-	while (first->parent && second->parent)
+	while (first && second)
 	{
 		if (first->parent != second->parent)
 		{
