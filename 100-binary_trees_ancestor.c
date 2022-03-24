@@ -24,7 +24,6 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	size_t d_snd = binary_tree_depth(second);
 	int diff = d_fst - d_snd;
 
-
 	if (!first || !second)
 		return (NULL);
 	if (first->parent == second)
@@ -51,7 +50,6 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		/*printf("f: %d\n2: %d\n", first->n, second->n);*/
 	}
 	while (first && second)
-	{
 		if (first->parent != second->parent)
 		{
 			first = first->parent;
@@ -59,6 +57,5 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		}
 		else
 			return (first->parent);
-	}
 	return (NULL);
 }
